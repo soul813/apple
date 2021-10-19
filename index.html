@@ -14,31 +14,60 @@
         .carousel-caption h3 { font-size: 35px; }
         .carousel-indicators>li {border: 1px solid #666;}
         .carousel-indicators>li.active {background-color: #666;} 
-        .bg1 {background-image: url('img/bg01.jpg'); background-size: cover; background-position: center center; height: 400px;}
-        .bg2 {background-image: url('img/bg02.jpg'); background-size: cover; background-position: center center; height: 400px}
-        .bg3 {background-image: url('img/bg3.jpg'); background-size: cover; background-position: center center; height: 400px}
-        .bg4 {background-image: url('img/bg4.jpg'); background-size: cover; background-position: center center; height: 400px}
-        .bg5 {background-image: url('img/bg5.jpg'); background-size: cover; background-position: center center; height: 400px}
-        .bg6 {background-image: url('img/bg6.jpg'); background-size: cover; background-position: center center; height: 400px}
+        .mainbg {background-image: url('img/main.jpg'); background-size: cover; background-position: center center; height: 500px;}
+        .maintxt {color: #fff; padding-top: 180px;}
+        .maintxt h3 {font-size: 65px;}
+        .maintxt p {font-size: 15px;}
+
+        .watch_bg {background-image: url('img/watch.jpg'); background-size: cover; background-position: center center; height: 800px;
+                   padding-top: 700px;}
+        .watch_bg p:first-child {font-size: 30px; font-weight: bold;}
+        .watch_bg p:nth-child(2) {font-size: 40px; font-weight: bold;}
+        .bg1 {background-image: url('img/bg01.jpg'); background-size: cover; background-position: center center; height: 400px;
+              color: #fff; padding-top: 155px;}
+        .bg1 p:first-child {font-size: 20px; font-weight: bold;}
+        .bg2 {background-image: url('img/bg02.jpg'); background-size: cover; background-position: center center; height: 400px;
+              padding-top: 20px;}
+        .bg2 p:first-child {font-size: 20px; font-weight: bold;}
+        .bg3 {background-image: url('img/bg3.jpg'); background-size: cover; background-position: center center; height: 400px;
+              padding-top: 20px;}
+        .bg3 p:first-child {font-size: 20px; font-weight: bold;}
+        .bg4 {background-image: url('img/bg4.jpg'); background-size: cover; background-position: center center; height: 400px;
+              padding-top: 20px;}
+        .bg4 p:first-child {font-size: 20px; font-weight: bold;}
+        .bg5 {background-image: url('img/bg5.jpg'); background-size: cover; background-position: center center; height: 400px;
+              padding-top: 20px;}
+        .bg5 p:first-child {font-size: 20px; font-weight: bold;}
+        .bg6 {background-image: url('img/bg6.jpg'); background-size: cover; background-position: center center; height: 400px;
+              color: #fff; padding-top: 250px;}
+        .bg6 p:first-child {font-size: 20px; font-weight: bold;}
+
+        
+
+
 
         .pc-img {display: block !important;}
         .mobile-img {display: none !important;}
-        #pc-footer {display: block !important;}
+        #pc-footer {display: block !important; background-color: #333; color: #fff; margin-top: 10px;}
         #mobile-footer {display: none !important;}
 
         .navbar {background-color: black; border: none;}
         .navbar a {color: #fff;}
         .navbar-brand {background-image: url('img/apple.svg'); background-repeat: no-repeat; text-indent: -9999px !important;
-                       margin: 10px 5px 0px 0px;}
+                       margin-left: 20px;}
 
         @media (max-width:768px) {
           .carousel-caption {display: none;}
           .pc-img {display: none !important;}
           .mobile-img {display: block !important;}
           #pc-footer {display: none !important;}
-          #mobile-footer {display: block !important;}
+          #mobile-footer {display: block !important; margin: 15px;}
+          
         }
         
+        #copyright { padding: 0 80px;}
+
+
     </style>
     <script>
       $(document).ready(function(){
@@ -84,7 +113,7 @@
             <ul class="nav navbar-nav navbar-right">
               <li><a href="#STORE" data-toggle="collapse" data-target=".navbar-collapse.in">STORE</a></li>
               <li><a href="#LOC" data-toggle="collapse" data-target=".navbar-collapse.in">MAP</a></li>
-              <li><a href="#iPad" data-toggle="collapse" data-target=".navbar-collapse.in"></a>iPad</a></li>
+              <li><a href="#iPad" data-toggle="collapse" data-target=".navbar-collapse.in">iPad</a></li>
               <li><a href="#iPhone" data-toggle="collapse" data-target=".navbar-collapse.in">iPhone</a></li>
               <li><a href="#Watch" data-toggle="collapse" data-target=".navbar-collapse.in">Watch</a></li>
               <li><a href="#TV" data-toggle="collapse" data-target=".navbar-collapse.in">TV</a></li>
@@ -153,8 +182,8 @@
         </a>
       </div>
 
-    <div class="container-fluid text-center">
-        <div class="container container-padding">
+    <div class="container-fluid text-center mainbg">
+        <div class="container container-padding maintxt">
         <h3>Unleashed.</h3>
         <p>Watch the Apple Event tomorrow at 10 a.m. PDT.</p>
         <p>Learn more ></p>
@@ -162,7 +191,7 @@
     </div>
     <div class="container text-center container-padding">
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-12 watch_bg">
                 <p>New</p>
                 <p>Apple Watch</p>
                 <p>Series 7</p>
@@ -171,6 +200,8 @@
             </div>
         </div>
     </div>
+
+    <!-- STORE ------------------------------------------------>
     <div id="STORE" class="container text-center container-padding">
       <h3>STORE</h3>
         <div class="row">
@@ -190,14 +221,14 @@
     <div class="container text-center container-padding">
         <div class="row">
             <div class="col-sm-6 bg3" style="padding-bottom: 100px;">
-                <p>iPhone 13</p>
+                <p>iPad Mini</p>
                 <p>Your new supuerpower.</p>
                 <p>Learn more >       Buy ></p>
             </div>
             <div class="col-sm-6 bg4">
-                <p>Fitness+</p>
-                <p>Now with Pilates, Group Workouts,</p>
-                <p>and guided Mediation.</p>
+                <p>New iMac</p>
+                <p>24‑inch model</p>
+                <p>Ready for big things.</p>
                 <p>Learn more >       Buy ></p>
             </div>
         </div>
@@ -205,19 +236,19 @@
     <div class="container text-center container-padding">
         <div class="row">
             <div class="col-sm-6 bg5" style="padding-bottom: 100px;">
-                <p>iPhone 13</p>
-                <p>Your new supuerpower.</p>
+                <p>Apple Card</p>
+                <p>Goodbye, plastic</p>
                 <p>Learn more >       Buy ></p>
             </div>
             <div class="col-sm-6 bg6">
-                <p>Fitness+</p>
-                <p>Now with Pilates, Group Workouts,</p>
-                <p>and guided Mediation.</p>
+                <p>Apple Arcade</p>
+                <p>Best Collection of</p>
+                <p>Mobile Games.</p>
                 <p>Learn more >       Buy ></p>
             </div>
         </div>
     </div>
-
+    <!-- STORE -->
 
     <!-- 지도를 표시할 div 입니다 -->
     <div id="LOC" class="container text-center">
@@ -441,7 +472,7 @@
     <!-- footer -->
     
     <hr>
-    <div class="container text-center">
+    <div id="copyright" class="container text-center">
       <div class="row">
         <div class="col-sm-4">Copyright © 2021 Apple Inc. All rights reserved.</div>
         <div class="col-sm-8">Privacy | Policy | Terms of Use | Sales and Refunds | Legal | Site Map</div>
