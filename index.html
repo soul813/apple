@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .container-padding {padding: 80px;}
+        .carousel-inner img { width: 100%; /* Set width to 100% */ margin: auto; }
+        .carousel-caption h3 { font-size: 35px; }
+        .carousel-indicators>li {border: 1px solid #666;}
+        .carousel-indicators>li.active {background-color: #666;} 
+        .bg1 {background-image: url('img/bg01.jpg'); background-size: cover; background-position: center center; height: 400px;}
+        .bg2 {background-image: url('img/bg02.jpg'); background-size: cover; background-position: center center; height: 400px}
+        .bg3 {background-image: url('img/bg3.jpg'); background-size: cover; background-position: center center; height: 400px}
+        .bg4 {background-image: url('img/bg4.jpg'); background-size: cover; background-position: center center; height: 400px}
+        .bg5 {background-image: url('img/bg5.jpg'); background-size: cover; background-position: center center; height: 400px}
+        .bg6 {background-image: url('img/bg6.jpg'); background-size: cover; background-position: center center; height: 400px}
+
+        .pc-img {display: block !important;}
+        .mobile-img {display: none !important;}
+        #pc-footer {display: block !important;}
+        #mobile-footer {display: none !important;}
+
+        .navbar {background-color: black; border: none;}
+        .navbar a {color: #fff;}
+        .navbar-brand {background-image: url('img/apple.svg'); background-repeat: no-repeat; text-indent: -9999px !important;
+                       margin: 10px 5px 0px 0px;}
+
+        @media (max-width:768px) {
+          .carousel-caption {display: none;}
+          .pc-img {display: none !important;}
+          .mobile-img {display: block !important;}
+          #pc-footer {display: none !important;}
+          #mobile-footer {display: block !important;}
+        }
+        
+    </style>
+    <script>
+      $(document).ready(function(){
+        // Add smooth scrolling to all links in navbar + footer link
+        $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+      
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+      
+          // Prevent default anchor click behavior
+          event.preventDefault();
+      
+          // Store hash
+          var hash = this.hash;
+      
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 900, function(){
+      
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+            });
+          } // End if
+        });
+      })
+      </script>
+</head>
+<body id="myPage">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#myPage" 
+            data-toggle="collapse" data-target=".navbar-collapse.in">Logo</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#STORE" data-toggle="collapse" data-target=".navbar-collapse.in">STORE</a></li>
+              <li><a href="#LOC" data-toggle="collapse" data-target=".navbar-collapse.in">MAP</a></li>
+              <li><a href="#iPad" data-toggle="collapse" data-target=".navbar-collapse.in"></a>iPad</a></li>
+              <li><a href="#iPhone" data-toggle="collapse" data-target=".navbar-collapse.in">iPhone</a></li>
+              <li><a href="#Watch" data-toggle="collapse" data-target=".navbar-collapse.in">Watch</a></li>
+              <li><a href="#TV" data-toggle="collapse" data-target=".navbar-collapse.in">TV</a></li>
+              <!-- <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Merchandise</a></li>
+                  <li><a href="#">Extras</a></li>
+                  <li><a href="#">Media</a></li>
+                </ul>
+              </li> -->
+              <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+      
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="Mac">
+          <div class="item active">
+            <img class="pc-img" src="img/pic01.jpg" alt="New York">
+            <img class="mobile-img" src="img/pic01_mobile.jpg" alt="New York">
+            <div class="carousel-caption">
+              <h3>iMac</h3>
+              <p>The atmosphere in New York is lorem ipsum.</p>
+            </div>
+          </div>
+      
+          <div class="item">
+            <img class="pc-img" src="img/pic02.jpg" alt="iPad">
+            <img class="mobile-img" src="img/pic02_mobile.jpg" alt="iPad">
+            <div class="carousel-caption">
+              <h3>iPad</h3>
+              <p>Thank you, Chicago - A night we won't forget.</p>
+            </div>
+          </div>
+      
+          <div class="item">
+            <img class="pc-img" src="img/pic03.jpg" alt="iPhone">
+            <img class="mobile-img" src="img/pic03_mobile.jpg" alt="iPhone">
+            <div class="carousel-caption">
+              <h3>iPhone</h3>
+              <p>Even the traffic was a mess, we had the best time.</p>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+    <div class="container-fluid text-center">
+        <div class="container container-padding">
+        <h3>Unleashed.</h3>
+        <p>Watch the Apple Event tomorrow at 10 a.m. PDT.</p>
+        <p>Learn more ></p>
+      </div>
+    </div>
+    <div class="container text-center container-padding">
+        <div class="row">
+            <div class="col-sm-12">
+                <p>New</p>
+                <p>Apple Watch</p>
+                <p>Series 7</p>
+                <p>Full Screen Ahead</p>
+                <p>Learn more >       Buy ></p>
+            </div>
+        </div>
+    </div>
+    <div id="STORE" class="container text-center container-padding">
+      <h3>STORE</h3>
+        <div class="row">
+            <div class="col-sm-6 bg1" style="padding-bottom: 100px;">
+                <p>iPhone 13</p>
+                <p>Your new supuerpower.</p>
+                <p>Learn more >       Buy ></p>
+            </div>
+            <div class="col-sm-6 bg2" >
+                <p>Fitness+</p>
+                <p>Now with Pilates, Group Workouts,</p>
+                <p>and guided Mediation.</p>
+                <p>Learn more >       Buy ></p>
+            </div>
+        </div>
+    </div>
+    <div class="container text-center container-padding">
+        <div class="row">
+            <div class="col-sm-6 bg3" style="padding-bottom: 100px;">
+                <p>iPhone 13</p>
+                <p>Your new supuerpower.</p>
+                <p>Learn more >       Buy ></p>
+            </div>
+            <div class="col-sm-6 bg4">
+                <p>Fitness+</p>
+                <p>Now with Pilates, Group Workouts,</p>
+                <p>and guided Mediation.</p>
+                <p>Learn more >       Buy ></p>
+            </div>
+        </div>
+    </div>
+    <div class="container text-center container-padding">
+        <div class="row">
+            <div class="col-sm-6 bg5" style="padding-bottom: 100px;">
+                <p>iPhone 13</p>
+                <p>Your new supuerpower.</p>
+                <p>Learn more >       Buy ></p>
+            </div>
+            <div class="col-sm-6 bg6">
+                <p>Fitness+</p>
+                <p>Now with Pilates, Group Workouts,</p>
+                <p>and guided Mediation.</p>
+                <p>Learn more >       Buy ></p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 지도를 표시할 div 입니다 -->
+    <div id="LOC" class="container text-center">
+      <h3>Apple Korea</h3>
+      <div id="map" style="width:100%;height:350px;"></div>
+    </div>
+
+
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9223461e499750eb8337366c73756501"></script>
+    <script>
+        var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+            mapOption = { 
+                center: new kakao.maps.LatLng(37.51325764377578, 127.0597493695943), // 지도의 중심좌표
+                level: 3 // 지도의 확대 레벨
+            };
+        // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+        var map = new kakao.maps.Map(mapContainer, mapOption); 
+
+        // 마커가 표시될 위치입니다 
+        var markerPosition  = new kakao.maps.LatLng(37.51325764377578, 127.0597493695943); 
+
+        // 마커를 생성합니다
+        var marker = new kakao.maps.Marker({
+            position: markerPosition
+        });
+
+        // 마커가 지도 위에 표시되도록 설정합니다
+        marker.setMap(map);
+
+        var iwContent = '<div style="padding:5px;">Apple Korea <br><a href="https://map.kakao.com/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank">큰지도보기</a> <a href="https://map.kakao.com/link/to/Hello World!,33.450701,126.570667" style="color:blue" target="_blank">길찾기</a></div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+        iwPosition = new kakao.maps.LatLng(33.450701, 126.570667); //인포윈도우 표시 위치입니다
+
+        // 인포윈도우를 생성합니다
+        var infowindow = new kakao.maps.InfoWindow({
+            position : iwPosition, 
+            content : iwContent 
+        });
+          
+        // 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
+        infowindow.open(map, marker); 
+    </script>
+
+    <!-- footer --------------------------------------------------------------->
+    <!-- desktop version -------------------------------------->
+    <div class="container container-padding" id="pc-footer">
+        <div class="row">
+            <div class="col-sm-3">
+                Shop and Learn<br>
+                Mac<br>
+                iPad<br>
+                iPhone<br>
+                Watch<br>
+                TV<br>
+                Music<br>
+                AirPods<br>
+                HomePod<br>
+                iPod touch<br>
+                AirTag<br>
+                Accessories<br>
+                Gift Cards<br>
+            </div>
+            <div class="col-sm-3">
+                Services<br>
+                Apple Music<br>
+                Apple TV+<br>
+                Apple Fitness+<br>
+                Apple News+<br>
+                Apple Arcade<br>
+                iCloud<br>
+                Apple One<br>
+                Apple Card<br>
+                Apple Books<br>
+                Apple Podcasts<br>
+                App Store<br>
+                Account<br>
+                Manage Your Apple ID<br>
+                Apple Store Account<br>
+                iCloud.com<br>
+            </div>
+            <div class="col-sm-3">
+                Apple Store<br>
+                Find a Store<br>
+                Shop Online<br>
+                Genius Bar<br>
+                Today at Apple<br>
+                Apple Camp<br>
+                Apple Store App<br>
+                Refurbished and Clearance<br>
+                Financing<br>
+                Apple Trade In<br>
+                Order Status<br>
+                Shopping Help<br>
+            </div>
+            <div class="col-sm-3">
+                Apple Values<br>
+                Accessibility<br>
+                Education<br>
+                Environment<br>
+                Inclusion and Diversity<br>
+                Privacy<br>
+                Racial Equity and Justice<br>
+                Supplier Responsibility<br>
+                About Apple<br>
+                Newsroom<br>
+                Apple Leadership<br>
+                Career Opportunities<br>
+                Investors<br>
+                Ethics & Compliance<br>
+                Events<br>
+                Contact Apple<br>
+            </div>
+        </div>
+    </div>
+    <!-- desktop version -->
+
+    <!-- Mobile version ---------------------------------------->
+    <div id="mobile-footer" class="panel-group">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#mobile-footer" href="#collapse1">
+              Shop and Learn</a>
+          </h4>
+        </div>
+        <div id="collapse1" class="panel-collapse collapse">
+          <div class="panel-body">
+                Mac<br>
+                iPad<br>
+                iPhone<br>
+                Watch<br>
+                TV<br>
+                Music<br>
+                AirPods<br>
+                HomePod<br>
+                iPod touch<br>
+                AirTag<br>
+                Accessories<br>
+                Gift Cards<br>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#mobile-footer" href="#collapse2">
+              Services</a>
+          </h4>
+        </div>
+        <div id="collapse2" class="panel-collapse collapse">
+          <div class="panel-body">
+                Apple Music<br>
+                Apple TV+<br>
+                Apple Fitness+<br>
+                Apple News+<br>
+                Apple Arcade<br>
+                iCloud<br>
+                Apple One<br>
+                Apple Card<br>
+                Apple Books<br>
+                Apple Podcasts<br>
+                App Store<br>
+                Account<br>
+                Manage Your Apple ID<br>
+                Apple Store Account<br>
+                iCloud.com<br>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#mobile-footer" href="#collapse3">
+            Apple Store</a>
+          </h4>
+        </div>
+        <div id="collapse3" class="panel-collapse collapse">
+          <div class="panel-body">
+                Find a Store<br>
+                Shop Online<br>
+                Genius Bar<br>
+                Today at Apple<br>
+                Apple Camp<br>
+                Apple Store App<br>
+                Refurbished and Clearance<br>
+                Financing<br>
+                Apple Trade In<br>
+                Order Status<br>
+                Shopping Help<br>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#mobile-footer" href="#collapse4">
+              Apple Values</a>
+          </h4>
+        </div>
+        <div id="collapse4" class="panel-collapse collapse">
+          <div class="panel-body">
+                Accessibility<br>
+                Education<br>
+                Environment<br>
+                Inclusion and Diversity<br>
+                Privacy<br>
+                Racial Equity and Justice<br>
+                Supplier Responsibility<br>
+                About Apple<br>
+                Newsroom<br>
+                Apple Leadership<br>
+                Career Opportunities<br>
+                Investors<br>
+                Ethics & Compliance<br>
+                Events<br>
+                Contact Apple<br>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile version -->
+    <!-- footer -->
+    
+    <hr>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-sm-4">Copyright © 2021 Apple Inc. All rights reserved.</div>
+        <div class="col-sm-8">Privacy | Policy | Terms of Use | Sales and Refunds | Legal | Site Map</div>
+      </div>
+    </div>
+</body>
+</html>
